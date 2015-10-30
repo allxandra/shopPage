@@ -1,10 +1,10 @@
 .sidebar
     .categories
-        ul.categories__list
         - var items = ["Флагманы","Бюджетная линейка"]
-        each item in items
-            li(class="categories__item_" + ((item == "Бюджетная линейка")? 'active': ''))
-                a(href="#").categories__link= item
+        ul.categories__list
+            each item in items
+                li(class="categories__item categories__item_" + ((item == "Бюджетная линейка")? 'active': ''))
+                    a(href="#").categories__link= item
 
     .filter
         ul.filter__list
@@ -24,7 +24,7 @@
                 .filter__title
                     a(href="#").filter__title-link Бренды
                 .filter__content
-                    ul.filter__choose
+                    ul.filter__choose.filter__choose_checkboxes
                         - var items = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
                         each item in items
                             li.filter__choose-item

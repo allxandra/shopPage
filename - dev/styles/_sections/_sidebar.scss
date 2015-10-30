@@ -1,0 +1,52 @@
+.sidebar {
+  float: left;
+  width: 335px;
+}
+.categories {
+  margin-bottom: 48px;
+
+}
+.categories__list {
+  border: 1px solid #dee1e4;
+  @include border-radius(5px);
+  overflow: hidden;
+  background: #ffffff;
+}
+.categories__item {
+  border: 1px solid #dee1e4;
+
+  &:first-child {
+    border-top: 0 none;
+  }
+  &.categories__item_active {
+
+    .categories__link{
+      background: #d9e5ea;
+      color: #5d656c;
+    }
+  }
+}
+.categories__link {
+  display: block;
+  width: 100%;
+  padding: 11px 38px;
+  color: #7f7f7f;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/*----------filter---------*/
+
+.filter__list {
+  @extend .categories__list;
+}
+.filter__item {
+  padding: 12px 26px;
+}
+.filter__title-link {
+  color: $black;
+  font-size: 16px;
+  line-height: 18px;
+  @include open-sans(semibold);
+  margin-bottom: 18px;
+}

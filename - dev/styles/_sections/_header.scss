@@ -105,7 +105,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   float: left;
   padding-top: 8px;
 }
-.menu__list {
+.menu__link {
   font-size: 16px;
   line-height: 18px;
   color: $black;
@@ -117,7 +117,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   }
 }
 
-.menu__item {
+.menu__item  {
   @include inlineblock();
   margin-left: 28px;
 
@@ -140,7 +140,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   background: $orange;
   color: #ffffff;
   @include open-sans(semibold);
-  border:0 none;
+  border: 0 none;
   @include border-radius(0 5px 5px 0);
   border: 1px solid $orange;
 }

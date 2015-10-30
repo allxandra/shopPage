@@ -26,4 +26,4 @@ $misc-sprite: sprite-map('icons/_misc/*.png', $spacing:70px);
 
 /* --------- sections --------- */
 
-@import "_sections/_header";
+@import "_sections/**/*";
