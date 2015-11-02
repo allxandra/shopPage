@@ -59,11 +59,12 @@
                                 a(href="#" style="background-color: #" + color).filter__colors-link
                     .filter__reset--wrap
                         a(href="#").filter__reset-link
+
             li.filter__item
                 .filter__title
                     a(href="#").filter__title-link Операционная система
                 .filter__content
-                    ul.filter__choose
+                    ul.filter__choose.filter__choose_checkboxes
                         - var items = ["Android", "iOS", "Symbian", "Windows Mobile", "Custom"]
                         each item in items
                             li.filter__choose-item
@@ -73,4 +74,5 @@
                                     .filter__choose-text= item
                     .filter__reset--wrap
                         a(href="#").filter__reset Сбросить фильтр
+
 

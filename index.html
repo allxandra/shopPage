@@ -193,7 +193,7 @@
 										<li class="filter__item">
 											<div class="filter__title"><a href="#" class="filter__title-link">Операционная система</a></div>
 											<div class="filter__content">
-												<ul class="filter__choose">
+												<ul class="filter__choose filter__choose_checkboxes">
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
 															<input name="" type="checkbox" class="filter__choose-input">
@@ -237,7 +237,32 @@
 								</div>
 							</div>
 							<div class="content">
-								<div class="sort"></div>
+								<div class="sort">
+									<div class="sort__left">
+										<div class="sort__select--wrap">
+											<div class="sort__title">Сортировать по</div>
+											<div class="sort__select">
+												<select class="sort__select-elem">
+													<option value="">по цене</option>
+													<option value="">по популярности</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="sort__right">
+										<div class="sort__title">Вид каталога</div>
+										<div class="sort__view">
+											<ul class="sort__view-list">
+												<li data-view="rows" class="sort__view-item sort__view_rows"><a href="#" class="sort__view-link">
+														<div class="sort__view-icon"></div></a></li>
+												<li data-view="grids" class="sort__view-item sort__view_grids"><a href="#" class="sort__view-link">
+														<div class="sort__view-icon"></div></a></li>
+												<li data-view="lines" class="sort__view-item sort__view_lines"><a href="#" class="sort__view-link">
+														<div class="sort__view-icon"></div></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
 								<div class="products"></div>
 							</div>
 						</div>
