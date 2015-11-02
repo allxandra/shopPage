@@ -1,7 +1,7 @@
 .sort {
   background: #e4ebee;
   @include clearfix;
-  border: 1px solid $gray;
+  border: 1px solid $grey;
   @include border-radius(5px);
   margin-bottom: 21px;
 }
@@ -33,7 +33,7 @@
 }
 .sort__view-item {
   float: left;
-  border-left: 1px solid $gray;
+  border-left: 1px solid $grey;
 }
 
 .sort__view-link {

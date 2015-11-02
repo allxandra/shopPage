@@ -118,10 +118,11 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   line-height: 18px;
   color: $black;
   @include open-sans(semibold);
-  text-decoration: none;
+
 
   &:hover {
     color: $orange;
+    text-decoration: none;
   }
 }
 

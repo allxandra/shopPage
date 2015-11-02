@@ -2,54 +2,81 @@
   float: left;
   width: 335px;
 }
-.categories {
-  margin-bottom: 48px;
 
+.categories {
+  margin-bottom: 40px;
 }
+
 .categories__list {
   border: 1px solid #dee1e4;
   @include border-radius(5px);
   overflow: hidden;
   background: #ffffff;
 }
+
 .categories__item {
-  border: 1px solid #dee1e4;
+  border-top: 1px solid #dee1e4;
 
   &:first-child {
     border-top: 0 none;
   }
-  &.categories__item_active {
 
-    .categories__link{
+  &.active {
+    .categories__link {
       background: #d9e5ea;
       color: #5d656c;
     }
   }
 }
+
 .categories__link {
   display: block;
   width: 100%;
-  padding: 11px 38px;
+  padding: 11px 30px;
   color: #7f7f7f;
   text-decoration: none;
   box-sizing: border-box;
 }
 
-/*----------filter---------*/
+/* --------- filter --------- */
+
+.filter__content {
+  display: none;
+  margin-top: 30px;
+}
 
 .filter__list {
   @extend .categories__list;
 }
+
 .filter__item {
   padding: 12px 26px;
-  border-top: 1px solid $gray;
+  border-top: 1px solid $grey;
 
   &:first-child {
     border-top: 0 none;
   }
+
+  &.active {
+    .filter__title {
+      &:after {
+        @include get-sprite($select-tr-map, to-top);
+      }
+    }
+  }
 }
-.filter__title{
-  margin-bottom: 8px;
+
+.filter__title {
+  padding-right: 30px;
+  position: relative;
+
+  &:after {
+    content: '';
+    @include get-sprite($select-tr-map, to-bottom);
+    position: absolute;
+    top: 7px;
+    right: 10px;
+  }
 }
 
 .filter__choose-item {
@@ -64,7 +91,7 @@
   color: $black;
   font-size: 16px;
   line-height: 18px;
-  font-weight: bold;
+  @include open-sans(semibold);
   text-decoration: none;
 }
 
@@ -76,6 +103,7 @@
   display: block;
   position: relative;
 }
+
 .filter__choose-elem {
   border: 3px solid #dee1e4;
   width: 13px;
@@ -95,6 +123,7 @@
     @include transition(.3s);
   }
 }
+
 .filter__choose-input {
   position: absolute;
   top: 0;
@@ -109,6 +138,7 @@
     }
   }
 }
+
 .filter__choose-text {
   @include inlineblock(top);
   font-size: 14px;
@@ -118,30 +148,29 @@
   margin-left: 8px;
 }
 
-/*----------checkboxes-----------*/
+/* --------- checkboxes --------- */
 
 .filter__choose_checkboxes {
-
-  .filter__choose-input{
+  .filter__choose-input {
     &:checked + .filter__choose-elem {
       background: $orange;
 
       &:after {
         opacity: 1;
-
       }
     }
   }
+
   .filter__choose-elem {
     width: 20px;
     height: 20px;
     @include border-radius(4px);
-    background: $gray;
+    background: $grey;
     @include transition(.2s);
     border: 0 none;
 
     &:after {
-      content: '';
+      content: "";
       display: block;
       @include absolute-center;
       opacity: 0;
@@ -164,14 +193,15 @@
   }
 }
 
-/*----------colors----------*/
+/* --------- colors --------- */
 
 .filter__colors-link {
-  border: 1px solid $gray;
+  border: 1px solid $grey;
   width: 37px;
   height: 37px;
   display: block;
 }
+
 .filter__colors-item {
   @include inlineblock();
   border: 3px solid transparent;
@@ -182,29 +212,35 @@
     border-color: $orange;
   }
 }
+
 .filter__colors {
   margin-left: -10px;
 }
 
-/*---------slider---------*/
+/* --------- slider --------- */
+
 .filter__slider-displays {
   @include clearfix;
   margin-bottom: 18px;
 }
+
 .filter__slider-left {
   float: left;
   width: 50%;
 }
+
 .filter__slider-right {
   float: right;
   width: 50%;
 }
-.filter__slider-input{
+
+.filter__slider-input {
   @extend .search__form-input;
   padding: 10px 8px;
   width: 83px;
   @include inlineblock(middle);
 }
+
 .filter__slider-text {
   @include inlineblock(middle);
   font-size: 14px;

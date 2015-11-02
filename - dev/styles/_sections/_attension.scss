@@ -4,5 +4,18 @@
     line-height: 16px;
     color: $black;
     margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 50px;
+  }
+  .column {
+    &.first {
+      width: 48% !important;
+      float: left !important;
+    }
+
+    &.last {
+      width: 48% !important;
+      float: right !important;
+    }
   }
 }
