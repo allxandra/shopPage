@@ -3,11 +3,9 @@ header.header
         .container
             .header__left
                 - var icons = ['fb', 'vk', 'tw']
-                ul.socials
-                    each icon in icons
-                        li(class="socials__item socials__item_" + icon)
-                            a(href="#").socials__link
-                                .socials__icon
+                each icon in icons
+                    li(class="socials__item socials__item_" + icon)
+                        a(href="#").socials__link
             .header__right
                 .adress ул.Маяковского 6, офис 17
                 a(href="tel:+79211231312").phone +7 (921) 123-13-12
